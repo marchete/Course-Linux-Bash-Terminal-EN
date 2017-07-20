@@ -1,0 +1,9 @@
+title : Linux Bash Terminal
+plan:
+  - title: About
+    statement: markdowns/part1.md
+
+projects:
+  webconsole:
+    root: projects
+    runner: ubuntu:latest
