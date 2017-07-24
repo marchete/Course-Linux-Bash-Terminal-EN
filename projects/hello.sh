@@ -8,11 +8,12 @@ history -c
 history -r
 function checkHistory {
   COUNT=0
-  FILE=`history | grep "$1" | grep -v history |wc -l`
-  echo "Status of $FILE ">/tmp/status
-  history >/tmp/history 
+  echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">$VIEWERFILE
   FINISHED=0
   while [ $FINISHED -eq 0 ]; do
+    FILE=`history | grep "$1" | grep -v history |wc -l`
+    echo "Status of $FILE ">/tmp/status
+    history >/tmp/history 
     if [ $FILE -ge 1 ]
     then
 	  echo "<h1>SUCCESS!</h1>">$VIEWERFILE
