@@ -20,7 +20,7 @@ function checkHistory {
 	  echo "WELL DONE!!"
 	  echo "WELL DONE!!" | tee /dev/pts/ptmx
 	  echo "<h1>WELL DONE!</h1>">$VIEWERFILE
-	  #sleep 2s
+	  sleep 0.4
       echo "TECHIO> success true"
       FINISHED=1
     fi
