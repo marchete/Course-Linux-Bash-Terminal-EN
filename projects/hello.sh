@@ -3,10 +3,12 @@ VIEWERFILE="/project/target/content.html"
 TESTING="echo \"Hello World!\""
 touch /root/.bash_history
 function checkHistory {
+  FIND=$1
+  echo "SEARCHING $FIND">>/tmp/testing
   COUNT=0
   FINISHED=0
   while [ $FINISHED -eq 0 ]; do
-    FILE=`cat /root/.bash_history | grep "$1" | grep -v history |wc -l`
+    FILE=`cat /root/.bash_history | grep "$FIND" | grep -v history |wc -l`
 	COUNT=$(($COUNT + 1))
 	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`cat /root/.bash_history`">$VIEWERFILE
 	#>> FOR TESTING PURPOSES
