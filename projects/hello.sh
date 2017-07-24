@@ -2,6 +2,16 @@
 VIEWERFILE="/project/target/content.html"
 TESTING='echo "Hello World!"'
 touch /root/.bash_history
+
+
+function sendMessage {
+ MSG=$1
+for file in /dev/pts/*
+do
+  echo "$MSG">$file
+done
+}
+
 function checkHistory {
   FIND=$1
   echo "SEARCHING $FIND">>/tmp/testing
@@ -19,7 +29,7 @@ function checkHistory {
     then
 	  echo "WELL DONE!!"
 	  echo "<h1>WELL DONE!</h1>">$VIEWERFILE
-	  sleep 0.4
+	  echo "TECHIO> open -s /project/target/ /viewer.html"
       echo "TECHIO> success true"
       FINISHED=1
     fi
