@@ -10,4 +10,5 @@ plan:
 projects:
   webconsole:
     root: projects
+    buildCommand: "cp bashrc ~/.bashrc"
     runner: ubuntu:latest
