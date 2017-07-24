@@ -7,6 +7,12 @@ function checkHistory {
   FINISHED=0
   while [ $FINISHED -eq 0 ]; do
     FILE=`cat /root/.bash_history | grep "$1" | grep -v history |wc -l`
+	COUNT=$(($COUNT + 1))
+	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">$VIEWERFILE
+	#>> FOR TESTING PURPOSES
+	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">/tmp/status
+	cat /root/.bash_history >/tmp/historia
+	#<< FOR TESTING PURPOSES
     if [ $FILE -ge 1 ]
     then
 	  echo "WELL DONE!!"
@@ -15,13 +21,7 @@ function checkHistory {
       echo "TECHIO> success true"
       FINISHED=1
     fi
-    sleep 0.3
-	COUNT=$(($COUNT + 1))
-	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">$VIEWERFILE
-	#>> FOR TESTING PURPOSES
-	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">/tmp/status
-	cat /root/.bash_history >/tmp/historia
-	#<< FOR TESTING PURPOSES
+    sleep 0.3	
   done 
 }
 
