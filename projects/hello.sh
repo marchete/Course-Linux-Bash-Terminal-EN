@@ -4,6 +4,7 @@
 VIEWERFILE="/project/target/viewer.txt"
 TESTING="echo \"Hello World!\""
 function checkHistory {
+  COUNT=0
   FILE=`history | grep "$1" | grep -v history |wc -l`
   echo "Status of $FILE ">/tmp/status
   history>/tmp/history 
@@ -17,9 +18,11 @@ function checkHistory {
       FINISHED=1
     fi
     sleep 0.1
+	COUNT = $(( COUNT + 1 ))
+	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1>">$VIEWERFILE
   done 
 }
-echo '<h1>Please write the following command: echo "Hello World!"</h1>'>$VIEWERFILE
+echo "<h1>Please write the following command: echo \"Hello World!\"</h1>">$VIEWERFILE
 echo "TECHIO> open -s /project/target/ /viewer.html"
 echo "TECHIO> terminal"
 
