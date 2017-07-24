@@ -21,3 +21,5 @@ For accessing remote systems, SSH connections are usually used. You can connect 
 Inside tech.io, the exercises will open a terminal for you. You don't need to install anything, it just works.
 So, let's use a Linux Terminal for the first time. Press "Run" to open a new Linux terminal.
 @[Print "Hello World!"]({"command":"/bin/bash /project/target/hello.sh"})
+
+>**Remember:** Bash terminal IS CASE SENSITIVE.
