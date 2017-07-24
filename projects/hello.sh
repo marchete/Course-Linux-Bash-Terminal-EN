@@ -6,7 +6,7 @@ TESTING="echo \"Hello World!\""
 function checkHistory {
   FILE=`history | grep "$1" | grep -v history |wc -l`
   echo "Status of $FILE ">/tmp/status
-  echo `history` > /tmp/history 
+  history>/tmp/history 
   FINISHED=0
   while [ $FINISHED -eq 0 ]; do
     if [ $FILE -ge 1 ]
