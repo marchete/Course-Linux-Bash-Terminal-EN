@@ -3,11 +3,13 @@
 
 VIEWERFILE="/project/target/viewer.txt"
 TESTING="echo \"Hello World!\""
+history -a
+history -r
 function checkHistory {
   COUNT=0
-  FILE=`history -a | grep "$1" | grep -v history |wc -l`
+  FILE=`history | grep "$1" | grep -v history |wc -l`
   echo "Status of $FILE ">/tmp/status
-  history -a >/tmp/history 
+  history  >/tmp/history 
   FINISHED=0
   while [ $FINISHED -eq 0 ]; do
     if [ $FILE -ge 1 ]
@@ -18,8 +20,8 @@ function checkHistory {
       FINISHED=1
     fi
     sleep 0.1
-	COUNT = $(( COUNT + 1 ))
-	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1>">$VIEWERFILE
+	COUNT=$(( COUNT + 1 ))
+	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">$VIEWERFILE
   done 
 }
 echo "<h1>Please write the following command: echo \"Hello World!\"</h1>">$VIEWERFILE
