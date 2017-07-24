@@ -1,7 +1,7 @@
 # { autofold
 #!/bin/bash
 
-VIEWERFILE="/project/target/viewer.txt"
+VIEWERFILE="/project/target/content.html"
 TESTING="echo \"Hello World!\""
 history -a
 history -r
@@ -9,7 +9,7 @@ function checkHistory {
   COUNT=0
   FILE=`history | grep "$1" | grep -v history |wc -l`
   echo "Status of $FILE ">/tmp/status
-  history  >/tmp/history 
+  history -a >/tmp/history 
   FINISHED=0
   while [ $FINISHED -eq 0 ]; do
     if [ $FILE -ge 1 ]

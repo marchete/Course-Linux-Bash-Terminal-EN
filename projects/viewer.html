@@ -11,11 +11,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script> 
 function loadlink(){
- $("#helper_text").load("viewer.txt");
+ $("#helper_text").load("content.html");
 }
 $(document).ready(function(){
    loadlink();
-   setInterval(function(){ loadlink();}, 500);   
+   setInterval(function(){ loadlink();}, 2000);   
 });
 </script>
 
