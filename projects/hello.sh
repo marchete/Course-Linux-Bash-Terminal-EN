@@ -1,15 +1,16 @@
 #!/bin/bash
 VIEWERFILE="/project/target/content.html"
 TESTING="echo \"Hello World!\""
-
+touch /root/.bash_history
 function checkHistory {
   COUNT=0
   FINISHED=0
   while [ $FINISHED -eq 0 ]; do
     #echo "Cuenta: $COUNT"
-    FILE=`history | grep "$1" | grep -v history |wc -l`
+    FILE=`cat /root/.bash_history | grep "$1" | grep -v history |wc -l`
     if [ $FILE -ge 1 ]
     then
+	  echo "SUCCESS!"
 	  echo "<h1>SUCCESS!</h1>">$VIEWERFILE
 	  sleep 2s
       echo "TECHIO> success true"
