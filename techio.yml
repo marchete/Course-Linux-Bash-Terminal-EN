@@ -1,8 +1,12 @@
 title : Linux Bash Terminal
+cover: /images/cover.png
 plan:
-  - title: About
-    statement: markdowns/part1.md
-
+  - title: "About Linux Bash Terminal"
+    statement: markdowns/about.md
+  - title: "Introduction"
+    statement: markdowns/intro.md
+  - title: "Final Words"
+    statement: markdowns/final.md
 projects:
   webconsole:
     root: projects
