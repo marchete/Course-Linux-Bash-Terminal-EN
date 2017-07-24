@@ -8,8 +8,6 @@ function checkHistory {
   while [ $FINISHED -eq 0 ]; do
     #echo "Cuenta: $COUNT"
     FILE=`history | grep "$1" | grep -v history |wc -l`
-    echo "Status of $FILE ">/tmp/status
-    history >/tmp/history 
     if [ $FILE -ge 1 ]
     then
 	  echo "<h1>SUCCESS!</h1>">$VIEWERFILE
@@ -19,6 +17,7 @@ function checkHistory {
     fi
     sleep 0.2
 	COUNT=$(($COUNT + 1))
+	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">/tmp/status
 	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">$VIEWERFILE
   done 
 }
