@@ -17,7 +17,7 @@ function checkHistory {
     then
 	  echo "WELL DONE!!"
 	  echo "<h1>WELL DONE!</h1>">$VIEWERFILE
-	  sleep 2s
+	  #sleep 2s
       echo "TECHIO> success true"
       FINISHED=1
     fi
