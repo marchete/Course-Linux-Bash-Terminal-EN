@@ -4,12 +4,13 @@
 VIEWERFILE="/project/target/content.html"
 TESTING="echo \"Hello World!\""
 history -a
+history -c
 history -r
 function checkHistory {
   COUNT=0
   FILE=`history | grep "$1" | grep -v history |wc -l`
   echo "Status of $FILE ">/tmp/status
-  history -a >/tmp/history 
+  history >/tmp/history 
   FINISHED=0
   while [ $FINISHED -eq 0 ]; do
     if [ $FILE -ge 1 ]
@@ -19,8 +20,8 @@ function checkHistory {
       echo "TECHIO> success true"
       FINISHED=1
     fi
-    sleep 0.1
-	COUNT=$(( COUNT + 1 ))
+    sleep 0.2
+	COUNT=$(($COUNT + 1))
 	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">$VIEWERFILE
   done 
 }
