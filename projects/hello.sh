@@ -18,7 +18,6 @@ function checkHistory {
     if [ $FILE -ge 1 ]
     then
 	  echo "WELL DONE!!"
-	  echo "WELL DONE!!" | tee /dev/pts/ptmx
 	  echo "<h1>WELL DONE!</h1>">$VIEWERFILE
 	  sleep 0.4
       echo "TECHIO> success true"
