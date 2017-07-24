@@ -6,22 +6,22 @@ function checkHistory {
   COUNT=0
   FINISHED=0
   while [ $FINISHED -eq 0 ]; do
-    #echo "Cuenta: $COUNT"
     FILE=`cat /root/.bash_history | grep "$1" | grep -v history |wc -l`
     if [ $FILE -ge 1 ]
     then
-	  echo "SUCCESS!"
-	  echo "<h1>SUCCESS!</h1>">$VIEWERFILE
+	  echo "WELL DONE!!"
+	  echo "<h1>WELL DONE!</h1>">$VIEWERFILE
 	  sleep 2s
       echo "TECHIO> success true"
       FINISHED=1
     fi
-    sleep 0.2
+    sleep 0.3
 	COUNT=$(($COUNT + 1))
-	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">/tmp/status
 	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">$VIEWERFILE
-	cat /root/.bash_history >/tmp/historia2
-	history>/tmp/historia
+	#>> FOR TESTING PURPOSES
+	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">/tmp/status
+	cat /root/.bash_history >/tmp/historia
+	#<< FOR TESTING PURPOSES
   done 
 }
 
