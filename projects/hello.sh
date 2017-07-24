@@ -28,7 +28,7 @@ function checkHistory {
     if [ $FILE -ge 1 ]
     then
 	  echo "WELL DONE!!"
-	  echo "<h1>WELL DONE!</h1>">$VIEWERFILE
+	  echo "<h1><span class=\"glyphicon glyphicon-ok-circle text-success\"></span> WELL DONE!</h1>">$VIEWERFILE
 	  echo "TECHIO> open -s /project/target/ /viewer.html"
       echo "TECHIO> success true"
       FINISHED=1
