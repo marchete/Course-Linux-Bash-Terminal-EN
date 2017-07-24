@@ -23,6 +23,7 @@ Both paths are refering to the same folder.
 ## Checklist - Things to learn
 
 Please think about what you have learned, and mark all checkboxes
+
 ?[In this lesson we have learned these commands].
 -[x] **`ls`** Directory listing.
 -[x] **`df`** Disk Free, and folder.
