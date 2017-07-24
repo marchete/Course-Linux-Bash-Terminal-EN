@@ -1,6 +1,6 @@
 #!/bin/bash
 VIEWERFILE="/project/target/content.html"
-TESTING="echo \"Hello World!\""
+TESTING='echo "Hello World!"'
 touch /root/.bash_history
 function checkHistory {
   FIND=$1
@@ -33,5 +33,5 @@ echo "TECHIO> open -s /project/target/ /viewer.html"
 echo "TECHIO> terminal"
 
 echo "Going to test $TESTING">/tmp/testing
-checkHistory $TESTING
+checkHistory "$TESTING"
 
