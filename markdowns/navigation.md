@@ -1,4 +1,4 @@
-# Introduction
+# Navigation and file listing
 
 Linux terminals are usually black, boring windows with just plain text. Sometimes you'll see colored text in some commands, but it's usually gray text over a black background.
 ![Linux Terminal](/images/terminal0.png)
@@ -7,12 +7,7 @@ On command-line, you'll see both the commands you execute and the output of thes
 
 In that image, I executed two commands: a `df -h` to see the disk space and `ls -l -h` to view the directory content.
 ![Linux Terminal](/images/terminal.png)
-Don't worry about understanding all that, you'll work with these commands later on.
-
-The input prompt has a some data always visible:
-![Terminal Prompt](/images/terminalPrompt.png)
-The terminal prompt can be changed by modifying some environment variables (PS1) in .bashrc file.
->**Note:** Prompt symbol is $ for normal users, and it changes to # when you have elevated privileges (like root for example)
+More on these commands on later lessons.
 
 ## Accesing Linux Terminal
 
