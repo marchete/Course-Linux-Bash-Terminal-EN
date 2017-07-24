@@ -9,30 +9,15 @@ In that image, I executed two commands: a `df -h` to see the disk space and `ls 
 ![Linux Terminal](/images/terminal.png)
 More on these commands on later lessons.
 
-## Directory management
+## Accesing Linux Terminal
 
-In Unix environment, you can create a directory with the `mkdir <new_dir>` command.
+Depending on the system you are accessing, you'll connect to a terminal from different ways.
+If your system is a Desktop Linux with GUI, you can use the "Terminal" application, or right-click on the folder you want to access with a terminal.
+If your system is a headless Linux without GUI, you'll directly have a command-line screen.
+For accessing remote systems, SSH connections are usually used. You can connect to Linux server from Windows, too, with SSH clients (like [Putty](http://www.putty.org/) )
 
-For instance, you can create the directory `images` at the root of your system using the command:
-```
-mkdir /images
-```
+## Hello World!
 
-You can also create a full list of directories and subdirectories using in 1 comamand using the `-p` parameter.
-```
-mkdir -p /images/sub1/sub2
-```
-will create the complete directory hierarchy structure in one single line.
-
-> The `mkdir` command manual is accesible here: [mkdir](http://man7.org/linux/man-pages/man1/mkdir.1.html)
-
-## File management
-
-You can change a file timestamp using the `touch <file>` command.
-```
-touch /hello.txt
-```
-will update the access and modification time of the `hello.txt` file. If the file does not already exists on the system, it will be created with an empty content.
-
-## In practice
-@[Create an empty file called valid_file under the directory /foo/bar/valid_file]({"command":"/bin/bash /project/target/validate1.sh"})
+Inside tech.io, the exercises will open a terminal for you. You don't need to install anything, it just works.
+So, let's use a Linux Terminal for the first time. Press "Run" to open a new Linux terminal.
+@[Print "Hello World!"]({"command":"/bin/bash /project/target/hello.sh"})
