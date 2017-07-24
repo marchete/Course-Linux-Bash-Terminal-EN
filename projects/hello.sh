@@ -5,9 +5,9 @@ VIEWERFILE="/project/target/viewer.txt"
 TESTING="echo \"Hello World!\""
 function checkHistory {
   COUNT=0
-  FILE=`history | grep "$1" | grep -v history |wc -l`
+  FILE=`history -a | grep "$1" | grep -v history |wc -l`
   echo "Status of $FILE ">/tmp/status
-  history>/tmp/history 
+  history -a >/tmp/history 
   FINISHED=0
   while [ $FINISHED -eq 0 ]; do
     if [ $FILE -ge 1 ]
