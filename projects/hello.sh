@@ -8,9 +8,9 @@ function checkHistory {
   while [ $FINISHED -eq 0 ]; do
     FILE=`cat /root/.bash_history | grep "$1" | grep -v history |wc -l`
 	COUNT=$(($COUNT + 1))
-	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">$VIEWERFILE
+	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`cat /root/.bash_history`">$VIEWERFILE
 	#>> FOR TESTING PURPOSES
-	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">/tmp/status
+	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`cat /root/.bash_history`">/tmp/status
 	cat /root/.bash_history >/tmp/historia
 	#<< FOR TESTING PURPOSES
     if [ $FILE -ge 1 ]
