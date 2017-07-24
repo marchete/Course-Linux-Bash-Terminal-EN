@@ -18,6 +18,7 @@ function checkHistory {
     if [ $FILE -ge 1 ]
     then
 	  echo "WELL DONE!!"
+	  wall "WELL DONE!!"
 	  echo "<h1>WELL DONE!</h1>">$VIEWERFILE
 	  #sleep 2s
       echo "TECHIO> success true"
