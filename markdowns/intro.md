@@ -1,4 +1,13 @@
-# File management in Unix environment
+# Introduction
+
+Linux terminals are usually black, boring windows with just plain text. Sometimes you'll see colored text in some commands, but it's usually gray text over a black background.
+![Linux Terminal](/images/terminal0.png)
+
+On command-line, you'll see both the commands you execute and the output of these commands.
+
+In that image, I executed two commands: a `df -h` to see the disk space and `ls -l -h` to view the directory content.
+![Linux Terminal](/images/terminal.png)
+More on these commands on later lessons.
 
 ## Directory management
 
