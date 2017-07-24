@@ -27,7 +27,6 @@ function checkHistory {
   done 
 }
 
-echo "Inicio"
 echo "<h1>Please write the following command: echo \"Hello World!\"</h1>">$VIEWERFILE
 echo "TECHIO> open -s /project/target/ /viewer.html"
 echo "TECHIO> terminal"
