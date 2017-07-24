@@ -20,15 +20,15 @@ Both paths are refering to the same folder.
 ## Hands on
 @[Let's navigate!]({"command":"/bin/bash /project/target/navigate.sh"})
 
-## Checklist - Things to learn
+## Checklist - Things you have learned
 
 Please think about what you have learned, and mark all checkboxes
 
 ?[In this lesson we have learned these commands]
--[x] **`ls`** Directory listing.
--[x] **`df`** Disk Free, and folder.
--[x] **`cd`** Change Directory.
--[x] **`pwd`** Shows current Directory.
+-[x] ls: Directory listing.
+-[x] df: Disk Free, and folder.
+-[x] cd: Change Directory.
+-[x] pwd: Shows current Directory.
 
 ?[Absolute and relative paths]
 -[x] Absolute path: Always refered to the root folder. Always starts with `/`
@@ -40,6 +40,6 @@ Please think about what you have learned, and mark all checkboxes
 
 
 ?[In this lesson we learned these commands]
--[x] **mkdir** Make Directory
--[x] **rm** Remove Files and Directories
+-[x] mkdir: Make Directory
+-[x] rm: Remove Files and Directories
 -[x] By default, Linux doesn't have any undo or trashcan, delete with care.
