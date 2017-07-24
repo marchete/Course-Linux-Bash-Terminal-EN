@@ -21,22 +21,24 @@ Both paths are refering to the same folder.
 @[Let's navigate!]({"command":"/bin/bash /project/target/navigate.sh"})
 
 ## Checklist - Things to learn
-?[In this lesson we learned these commands].
--[x] ls Directory listing.
--[x] df Disk Free, and folder.
--[x] cd Change Directory.
--[x] pwd Shows current Directory.
+
+Please think about what you have learned, and mark all checkboxes
+?[In this lesson we have learned these commands].
+-[x] **`ls`** Directory listing.
+-[x] **`df`** Disk Free, and folder.
+-[x] **`cd`** Change Directory.
+-[x] **`pwd`** Shows current Directory.
 
 ?[Absolute and relative paths]
 -[x] Absolute path: Always refered to the root folder. Always starts with `/`
 -[x] Relative path: Depends on your current directory. Never starts with `/`
 
 ?[Other stuff]
--[x] Always be lazy, use `<Tab>` to reduce typing.
+-[x] Always be lazy, use **`Tab`** to reduce typing.
 -[x] Linux doesn't have drive letters, just files and folders.
 
 
 ?[In this lesson we learned these commands]
--[x] mkdir Make Directory
--[x] rm Remove Files and Directories
+-[x] **mkdir** Make Directory
+-[x] **rm** Remove Files and Directories
 -[x] By default, Linux doesn't have any undo or trashcan, delete with care.

@@ -9,10 +9,10 @@ In that image, I executed two commands: a `df -h` to see the disk space and `ls 
 ![Linux Terminal](/images/terminal.png)
 Don't worry about understanding all that, you'll work with these commands later on.
 
-The input prompt has a some data always visible:
+The input prompt has some data always visible:
 ![Terminal Prompt](/images/terminalPrompt.png)
-The terminal prompt can be changed by modifying some environment variables (PS1) in .bashrc file.
->**Note:** Prompt symbol is $ for normal users, and it changes to # when you have elevated privileges (like root for example)
+The terminal prompt can be changed by modifying some environment variables (PS1) in the .bashrc file.
+>**Note:** Prompt symbol is `$` for normal users, and it changes to `#` when you have elevated privileges (like root for example)
 
 ## Accesing Linux Terminal
 
@@ -26,9 +26,9 @@ For accessing remote systems, SSH connections are used. You can connect to a Lin
 
 ## Hello World!
 
-Inside tech.io, the exercises will open a terminal for you. You don't need to install anything, it just works.
+With the [Tech.io](https://tech.io/) virtualization technology all exercises will open a terminal for you. You don't need to install anything, it just works.
 
-So, let's use a Linux Terminal for the first time. Press "Run" to open a new Linux terminal.
+So, let's use a Linux Terminal for the first time. Press **`Run`** to open a new Linux terminal.
 @[Print "Hello World!"]({"command":"/bin/bash /project/target/hello.sh"})
 
 >**Remember:** Bash terminal IS CASE SENSITIVE. 
