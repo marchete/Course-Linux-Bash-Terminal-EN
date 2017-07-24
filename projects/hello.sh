@@ -1,22 +1,15 @@
 #!/bin/bash
 VIEWERFILE="/project/target/content.html"
 TESTING="echo \"Hello World!\""
-echo "Veo Historias"
-# history -a
-# history -c
-# history -r
-
 
 function checkHistory {
-echo "funcion"
   COUNT=0
-  echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">$VIEWERFILE
   FINISHED=0
   while [ $FINISHED -eq 0 ]; do
-    FILE="hola"
-	#`history | grep "$1" | grep -v history |wc -l`
+    #echo "Cuenta: $COUNT"
+    FILE=`history | grep "$1" | grep -v history |wc -l`
     echo "Status of $FILE ">/tmp/status
-    # history >/tmp/history 
+    history >/tmp/history 
     if [ $FILE -ge 1 ]
     then
 	  echo "<h1>SUCCESS!</h1>">$VIEWERFILE
