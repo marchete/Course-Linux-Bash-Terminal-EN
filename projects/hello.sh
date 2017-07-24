@@ -19,6 +19,7 @@ function checkHistory {
 	COUNT=$(($COUNT + 1))
 	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">/tmp/status
 	echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`history`">$VIEWERFILE
+	cat /root/.bash_history >/tmp/historia2
 	history>/tmp/historia
   done 
 }

@@ -19,6 +19,7 @@ HISTFILESIZE=8000
 #trap 'history -r' USR1 
 #export PROMPT_COMMAND="history -a ; history -c; ps a | awk '/ bash$/ {system (\"kill -USR1 \" \$1)}'; $PROMPT_COMMAND"
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+#export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
