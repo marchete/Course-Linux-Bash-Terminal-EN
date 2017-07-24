@@ -5,6 +5,8 @@ plan:
     statement: markdowns/about.md
   - title: "Introduction"
     statement: markdowns/intro.md
+  - title: "Navigation and File Listing"
+    statement: markdowns/navigation.md
   - title: "Final Words"
     statement: markdowns/final.md
 projects:

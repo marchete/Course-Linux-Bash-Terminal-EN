@@ -1,29 +1,34 @@
-# Navigation and file listing
+# Navigation and File Listing
 
-Linux terminals are usually black, boring windows with just plain text. Sometimes you'll see colored text in some commands, but it's usually gray text over a black background.
-![Linux Terminal](/images/terminal0.png)
+## Linux Files and Folder hierarchy.
+Linux Files and Folders have many similitudes with Windows Filesystems. You have files and folders organized in a tree directory structure.
 
-On command-line, you'll see both the commands you execute and the output of these commands.
+A directory (or folder) may contain files or other directories, while a folder is just a single archive. 
 
-In that image, I executed two commands: a `df -h` to see the disk space and `ls -l -h` to view the directory content.
-![Linux Terminal](/images/terminal.png)
-More on these commands on later lessons.
+There is a one special directory, the root folder, named `/`, that is always the source folder of any path in the linux filesystem.
 
-## Accesing Linux Terminal
+>**Note:** Unlike Windows, on Linux there aren't drive letters (C:\, E:\). Drives are mounted on folders.
 
-Depending on the system you are accessing, you'll connect to a terminal from different ways.
 
-If your system is a Desktop Linux with GUI, you can use the "Terminal" application, or right-click on the folder you want to access with a terminal.
+This image shows the same folder on a Windows 10 PC (with Ubuntu Bash installed, so you can use Bash directly on Windows):
+![Terminal Prompt](/images/WinvsLinux.png)
+Both paths are refering to the same folder.
 
-If your system is a headless Linux without GUI, you'll directly have a command-line screen.
+## Absolute and relative paths
 
-For accessing remote systems, SSH connections are used. You can connect to a Linux server from Windows, too, with SSH clients (like [Putty](http://www.putty.org/) )
 
-## Hello World!
+## Hands on
+@[Let's navigate!]({"command":"/bin/bash /project/target/navigate.sh"})
 
-Inside tech.io, the exercises will open a terminal for you. You don't need to install anything, it just works.
+## Things to remember
+?[In this lesson we learned these commands]
+-[x] ls Directory listing
+-[x] df Disk Free, and folder 
+-[x] cd Change Directory
+-[x] pwd Shows current Directory
+-[x] mkdir Make Directory
+-[x] rm Remove Files and Directories
 
-So, let's use a Linux Terminal for the first time. Press "Run" to open a new Linux terminal.
-@[Print "Hello World!"]({"command":"/bin/bash /project/target/hello.sh"})
-
->**Remember:** Bash terminal IS CASE SENSITIVE. 
+?[Absolute and relative path]
+-[x] Absolute path: Always refered to the root folder. Always starts with `/`
+-[x] Relative path: Depends on your current directory. Never starts with `/`
