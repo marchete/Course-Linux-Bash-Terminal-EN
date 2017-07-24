@@ -9,7 +9,7 @@ function checkHistory {
   while [ $FINISHED -eq 0 ]; do
     if [ "$FILE" -ge 1 ]
     then
-	  echo "SUCCESS!">$VIEWERFILE
+	  echo "<h1>SUCCESS!</h1>">$VIEWERFILE
 	  sleep 2s
       echo "TECHIO> success true"
       FINISHED=1
@@ -17,7 +17,7 @@ function checkHistory {
     sleep 0.1
   done 
 }
-echo "Please write the following command: echo \"Hello World!\"">$VIEWERFILE
+echo "<h1>Please write the following command: echo \"Hello World!\"</h1>">$VIEWERFILE
 echo "TECHIO> open -s /project/target/ /viewer.html"
 echo "TECHIO> terminal"
 
