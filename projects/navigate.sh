@@ -33,7 +33,7 @@ function checkHistory {
 echo "TECHIO> terminal"
 sendMessage "<h2>Write the command: <button class=\"btn\">pwd</button></h2></p>pwd will print the current directory where you are. It's not very useful in many Linux systems as you already have this info on the prompt line, but sometimes you have a long path and you can't see all the path"
 checkHistory "pwd"
-sendMessage "<h2>Good! Now move to the parent folder: <button class=\"btn\">cd ..</button></h2></p>cd is the command to Change Directory. It can be a relative or an absolute path. In this case is a relative path. Remember that you need an space between cd and the two dots"
+sendMessage "<h2>Good! Now move to the parent folder: <button class=\"btn\">cd ..</button></h2></p>cd is the command to Change Directory. It can be a relative or an absolute path. In this case is a relative path. Remember that you need an space between cd and the two dots. The command cd without any parameter takes you to home directory ~"
 checkHistory "cd .."
 sendMessage "<h2>You should be on folder /project now, try to move to the root folder, user the command: <button class=\"btn\">cd /</button></h2></p>In this case the cd command will use an absolute path."
 checkHistory "cd /"

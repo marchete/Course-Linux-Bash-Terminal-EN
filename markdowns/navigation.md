@@ -7,7 +7,7 @@ A directory (or folder) may contain files or other directories, while a file is 
 
 There is a one special directory, the root folder, named `/`, that is always the source folder of any path in the linux filesystem.
 
->**Note:** Unlike Windows, on Linux there aren't drive letters (C:\, E:\). Drives are mounted on folders. On Linux almost everything is represented as a file.
+>**Note:** Unlike Windows, on Linux there aren't drive letters (C:\, E:\). Drives are mounted on folders. On Linux almost everything is represented as a file. And unlike Windows, Directory separators are `/` (division symbol) and not `\`.
 
 
 This image shows the same folder on a Windows 10 PC (with Ubuntu Bash installed, so you can use Bash directly on Windows):
@@ -16,7 +16,18 @@ Both paths are refering to the same folder.
 
 ## Absolute and relative paths
 
-Absolute is refered to /, relative use . as current directory, or .. for parent directory
+Absolute paths always start with the root path, so always have `/` as the first character of the path.
+Absolute paths are univocal, that is, it cannot have a different interpretation or cannot point to another location.
+It always target the same document or folder no matter on what folder is the prompt.
+
+**Absolute path:** ```/mnt/c/Develop/tech.io/Course/bash-terminal```
+
+On the other hand, relative paths depends on the working directory, the current path shown in the prompt.
+Relative paths works like on Windows. A single dot `.` means current directory, and two dots `..` reflects the parent directory, the symbol `~` is home directory (depends on the current user). 
+Any path is considered relative if it doesn't start with the root dir `/`. That means that you don't need to use the single dot `.` at start of each relative path.
+Relative path ```./subdir/hello``` is the same as ```subdir/hello```. So what's the use of the single dot? `.` is usually used to run executables in the working directory.
+
+**Relative path:** ```../../tech.io/Course/bash-terminal``` and ```tech.io/Course/bash-terminal```
 
 ## Hands on
 @[Let's navigate!]({"command":"/bin/bash /project/target/navigate.sh"})
