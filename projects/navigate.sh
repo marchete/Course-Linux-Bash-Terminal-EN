@@ -1,6 +1,5 @@
 #!/bin/bash
 VIEWERFILE="/project/target/content.html"
-TESTING='echo "Hello World!"'
 touch /root/.bash_history
 
 
@@ -17,23 +16,11 @@ echo "TECHIO> open -s /project/target/ /viewer.html"
 
 function checkHistory {
   FIND=$1
-  echo "SEARCHING $FIND">>/tmp/testing
-  #COUNT=0
   FINISHED=0
   while [ $FINISHED -eq 0 ]; do
     FILE=`cat /root/.bash_history | grep "$FIND" | grep -v /root/.bash_history |wc -l`
-	#COUNT=$(($COUNT + 1))
-	#echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`cat /root/.bash_history`">$VIEWERFILE
-	#>> FOR TESTING PURPOSES
-	#echo "<h1>Please write the following command: echo \"Hello World!\" $COUNT </h1></p>`cat /root/.bash_history`">/tmp/status
-	#cat /root/.bash_history >/tmp/historia
-	#<< FOR TESTING PURPOSES
     if [ $FILE -ge 1 ]
     then
-	  #echo "Well Done! Continue to the next lesson."
-	  #echo "<h1><span class=\"glyphicon glyphicon-ok-circle text-success\"></span> Well Done! Continue to the next lesson.</h1>">$VIEWERFILE
-	  #echo "TECHIO> open -s /project/target/ /viewer.html"
-      #echo "TECHIO> success true"
       FINISHED=1
 	else 
 	  sleep 0.3	
@@ -61,5 +48,5 @@ checkHistory "df -h"
 sendMessage "<h1>Almost all Linux commands have the --help parameter to show some basic info. Let's try it: ls --help</h1></p>There is also the man command, that shows more information about a command: man <command>. But in many cases --help parameter is just enough"
 checkHistory "ls --help"
 sendMessage "<h1>Wonderful! It isn't that hard, right?</h1></p>Please fill the checklist to ensure that your remember all commands used"
-echo "Well Done! Continue to the next lesson."
+echo "Well Done! Please fill the checklist with all you have learned."
 echo "TECHIO> success true"
