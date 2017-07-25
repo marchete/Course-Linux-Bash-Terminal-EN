@@ -7,6 +7,8 @@ plan:
     statement: markdowns/intro.md
   - title: "Navigation and File Listing"
     statement: markdowns/navigation.md
+  - title: "File and Folder manipulation"
+    statement: markdowns/files.md
   - title: "Final Words"
     statement: markdowns/final.md
 projects:

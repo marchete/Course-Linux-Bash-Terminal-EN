@@ -39,8 +39,3 @@ Please think about what you have learned, and mark all checkboxes
 -[x] Always be lazy, use Tab and cursors to reduce typing.
 -[x] Linux doesn't have drive letters, just files and folders.
 
-
-?[In this lesson we learned these commands]
--[x] mkdir: Make Directory
--[x] rm: Remove Files and Directories
--[x] By default, Linux doesn't have any undo or trashcan, delete with care.
