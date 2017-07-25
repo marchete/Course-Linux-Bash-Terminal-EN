@@ -23,11 +23,18 @@ It always target the same document or folder no matter on what folder is the pro
 **Absolute path:** ```/mnt/c/Develop/tech.io/Course/bash-terminal```
 
 On the other hand, relative paths depends on the working directory, the current path shown in the prompt.
-Relative paths works like on Windows. A single dot `.` means current directory, and two dots `..` reflects the parent directory, the symbol `~` is home directory (depends on the current user). 
+Relative paths works like on Windows. A single dot `.` means current directory, and two dots `..` reflects the parent directory, the symbol `~` is home directory (depends on the current user and not on the working directory). 
 Any path is considered relative if it doesn't start with the root dir `/`. That means that you don't need to use the single dot `.` at start of each relative path.
 Relative path ```./subdir/hello``` is the same as ```subdir/hello```. So what's the use of the single dot? `.` is usually used to run executables in the working directory.
 
-**Relative path:** ```../../tech.io/Course/bash-terminal``` and ```tech.io/Course/bash-terminal```
+**Relative path:** ```../../tech.io/Course/bash-terminal```, ```tech.io/Course/bash-terminal``` or ```~```
+
+## Quotes and escaping characters
+
+By default Linux define spaces as parameter separator. So in the command ```cd /mnt/c/Program Files```, the command cd (Change Directory, we'll use it later) receives two parameters: `/mnt/c/Program` and `Files`.
+That's undesired, so we need to quote or escape the space with `\` to define the correct path:
+Quotes: ```cd "/mnt/c/Program Files"``` or ```cd '/mnt/c/Program Files'```
+Escape character: ```cd /mnt/c/Program\ Files```
 
 ## Hands on
 @[Let's navigate!]({"command":"/bin/bash /project/target/navigate.sh"})
