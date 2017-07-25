@@ -31,7 +31,7 @@ function checkHistory {
 
 
 echo "TECHIO> terminal"
-sendMessage "<h1>Write the command: <div class=\"well well-sm\">pwd</div></h1></p>pwd will print the current directory where you are. It's not very useful in many Linux systems as you already have this info on the prompt line, but sometimes you have a long path and you can't see all the path"
+sendMessage "<h1>Write the command: <button class=\"btn\">pwd</button></h1></p>pwd will print the current directory where you are. It's not very useful in many Linux systems as you already have this info on the prompt line, but sometimes you have a long path and you can't see all the path"
 checkHistory "pwd"
 sendMessage "<h1>Good! Now move to the parent folder: <div class=\"well well-sm\">cd ..</div></h1></p>cd is the command to Change Directory. It can be a relative or an absolute path. In this case is a relative path. Remember that you need an space between cd and the two dots"
 checkHistory "cd .."
@@ -47,7 +47,7 @@ sendMessage "<h1>Other lazy commands are up and down cursor to check command his
 checkHistory "df -h"
 sendMessage "<h1>Almost all Linux commands have the --help parameter to show some basic info. Let's try it:<div class=\"well well-sm\">ls --help</div></h1></p>There is also the man command, that shows more information about a command: man <command>. But in many cases --help parameter is just enough"
 checkHistory "ls --help"
-sendMessage "<h1>Wonderful! It isn't that hard, right?. Now you can freely test any command you have learned. Don't worry about breaking anything ;). When you are ready use the command:<div class=\"well well-sm\">exit</div> to close this terminal and end the exercise.</h1></p>Please fill the checklist to ensure that your remember all commands used"
+sendMessage "<h1>Wonderful! It isn't that hard, right?. Now you can freely test any command you have learned. Don't worry about breaking anything ;). When you are ready use the command:<button class=\"btn\">exit</button> to close this terminal and end the exercise.</h1></p>Please fill the checklist to ensure that your remember all commands used"
 checkHistory "exit"
 sendMessage "<h1><span class=\"glyphicon glyphicon-ok-circle text-success\"></span> Well Done! Fill the checklist and continue to the next lesson.</h1>"
 echo "Well Done! Please fill the checklist with all you have learned."
