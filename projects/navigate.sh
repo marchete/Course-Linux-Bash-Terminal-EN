@@ -47,6 +47,7 @@ sendMessage "<h1>Other lazy commands are up and down cursor to check command his
 checkHistory "df -h"
 sendMessage "<h1>Almost all Linux commands have the --help parameter to show some basic info. Let's try it:<div class=\"well well-sm\">ls --help</div></h1></p>There is also the man command, that shows more information about a command: man <command>. But in many cases --help parameter is just enough"
 checkHistory "ls --help"
-sendMessage "<h1>Wonderful! It isn't that hard, right?</h1></p>Please fill the checklist to ensure that your remember all commands used"
+sendMessage "<h1>Wonderful! It isn't that hard, right?.Use the command:<div class=\"well well-sm\">exit</div> to close this terminal and end the exercise</h1></p>Please fill the checklist to ensure that your remember all commands used"
+checkHistory "exit"
 echo "Well Done! Please fill the checklist with all you have learned."
 echo "TECHIO> success true"
