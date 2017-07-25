@@ -1,6 +1,7 @@
 #!/bin/bash
 WEBROOT="/tmp/server"
-mkdir $WEBROOT
+mkdir "$WEBROOT"
+cp -p /project/target/viewer.html "$WEBROOT/viewer.html"
 VIEWERFILE="$WEBROOT/content.html"
 #VIEWERFILE="/project/target/content.html"
 touch /root/.bash_history
