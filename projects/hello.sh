@@ -20,9 +20,9 @@ function checkHistory {
   while [ $FINISHED -eq 0 ]; do
     FILE=`cat /root/.bash_history | grep "$FIND" | grep -v /root/.bash_history |wc -l`
 	COUNT=$(($COUNT + 1))
-	echo "<h1>Please write the following command: <div class=\"well\">echo \"Hello World!\"</div></h1></p> $COUNT `cat /root/.bash_history`">$VIEWERFILE
+	echo "<h1>Please write the following command: <div class=\"well well-sm\">echo \"Hello World!\"</div></h1></p> $COUNT `cat /root/.bash_history`">$VIEWERFILE
 	#>> FOR TESTING PURPOSES
-	echo "<h1>Please write the following command: <div class=\"well\">echo \"Hello World!\"</div></h1></p> $COUNT `cat /root/.bash_history`">/tmp/status
+	echo "<h1>Please write the following command: <div class=\"well well-sm\">echo \"Hello World!\"</div></h1></p> $COUNT `cat /root/.bash_history`">/tmp/status
 	cat /root/.bash_history >/tmp/historia
 	#<< FOR TESTING PURPOSES
     if [ $FILE -ge 1 ]
@@ -37,7 +37,7 @@ function checkHistory {
   done 
 }
 
-echo "<h1>Please write the following command: <div class=\"well\">echo \"Hello World!\"</div></h1>">$VIEWERFILE
+echo "<h1>Please write the following command: <div class=\"well well-sm\">echo \"Hello World!\"</div></h1>">$VIEWERFILE
 echo "TECHIO> open -s /project/target/ /viewer.html"
 echo "TECHIO> terminal"
 
