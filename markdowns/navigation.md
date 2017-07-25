@@ -1,9 +1,9 @@
 # Navigation and File Listing
 
 ## Linux Files and Folder hierarchy.
-Linux Files and Folders have many similitudes with Windows Filesystems. You have files and folders organized in a tree directory structure.
+Linux Files and Folders have many similarities with Windows Filesystems. You have files and folders organized in a tree directory structure.
 
-A directory (or folder) may contain files or other directories, while a folder is just a single archive. 
+A directory (or folder) may contain files or other directories, while a file is just a single archive that may contain data in it. 
 
 There is a one special directory, the root folder, named `/`, that is always the source folder of any path in the linux filesystem.
 
@@ -16,6 +16,7 @@ Both paths are refering to the same folder.
 
 ## Absolute and relative paths
 
+Absolute is refered to /, relative use . as current directory, or .. for parent directory
 
 ## Hands on
 @[Let's navigate!]({"command":"/bin/bash /project/target/navigate.sh"})
@@ -26,7 +27,7 @@ Please think about what you have learned, and mark all checkboxes
 
 ?[In this lesson we have learned these commands]
 -[x] ls: Directory listing.
--[x] df: Disk Free, and folder.
+-[x] df: Disk Free, and how filesystems are mounted.
 -[x] cd: Change Directory.
 -[x] pwd: Shows current Directory.
 
