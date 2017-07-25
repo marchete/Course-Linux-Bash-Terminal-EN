@@ -15,4 +15,5 @@ projects:
   webconsole:
     root: projects
     buildCommand: "cp bashrc ~/.bashrc"
-    runner: ubuntu:latest
+    runner: ruby-bundler-runner:1.1.0-ruby-2.4
+#    runner: ubuntu:latest

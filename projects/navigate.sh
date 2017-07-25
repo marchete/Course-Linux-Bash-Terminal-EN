@@ -1,11 +1,18 @@
 #!/bin/bash
-VIEWERFILE="/project/target/content.html"
+WEBROOT="/tmp/server"
+mkdir $WEBROOT
+VIEWERFILE="$WEBROOT/content.html"
+#VIEWERFILE="/project/target/content.html"
 touch /root/.bash_history
+
+#open server
+ruby -run -ehttpd $WEBROOT/ -p8000&
+echo "TECHIO> open --port 8000 /viewer.html"
 
 
 function sendMessage {
 echo "$1">$VIEWERFILE
-echo "TECHIO> open -s /project/target/ /viewer.html"
+#echo "TECHIO> open -s /project/target/ /viewer.html"
 
 # MSG=$1
 #for file in /dev/pts/*
