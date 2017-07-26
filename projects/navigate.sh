@@ -3,23 +3,16 @@ WEBROOT="/tmp/server"
 mkdir "$WEBROOT"
 cp -p /project/target/viewer.html "$WEBROOT/viewer.html"
 VIEWERFILE="$WEBROOT/content.html"
-#VIEWERFILE="/project/target/content.html"
 touch /root/.bash_history
 
-#open server
-ruby -run -ehttpd $WEBROOT/ -p8000&
+#Open server. Magic 1-liner
+#ruby -run -ehttpd $WEBROOT/ -p8000 & &>/dev/nul
+ruby -rwebrick -e"WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => \"$WEBROOT\",  Logger: WEBrick::Log.new(\"/dev/null\"), AccessLog: [],).start"
 echo "TECHIO> open --port 8000 /viewer.html"
 
 
 function sendMessage {
 echo "$1">$VIEWERFILE
-#echo "TECHIO> open -s /project/target/ /viewer.html"
-
-# MSG=$1
-#for file in /dev/pts/*
-#do
-#  echo "$MSG">$file
-#done
 }
 
 function checkHistory {
