@@ -48,7 +48,7 @@ It also works for commands, if you write `d` and press `Tab` a couple of times i
 For example, I can write the command `dpkg-maintscript-helper` as `dp<Tab><Tab>-m<Tab>`.
 
 ## Hands on
-@[Let's navigate!]({"command":"/bin/bash /project/target/navigate.sh"})
+@[Let's navigate!]({"command":"/bin/bash /project/target/RUN.sh navigate"})
 
 ## Checklist - Things you have learned
 
