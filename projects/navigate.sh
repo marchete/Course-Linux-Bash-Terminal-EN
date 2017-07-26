@@ -38,6 +38,7 @@ function checkHistory {
 
 
 echo "TECHIO> terminal"
+chmod 777 ./navigate_${LOCALE}.sh
 ./navigate_${LOCALE}.sh
 sleep 1s	
 echo "TECHIO> success true"
