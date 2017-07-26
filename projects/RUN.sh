@@ -1,13 +1,11 @@
 #!/bin/bash
 EXERCISE=$1
 LOCALE=$2
-if [ -z "$LOCALE" ]
-then
-LOCALE="en"
-fi
 source functions.sh
-source ${EXERCISE}_${LOCALE}.sh
-source ${EXERCISE}_CMD.sh
+source exercises/${EXERCISE}/TEXT.sh
+if [ -e "exercises/${EXERCISE}/TEXT_${LOCALE}.sh" ]; then source "exercises/${EXERCISE}/TEXT_${LOCALE}.sh"; fi
+source exercises/${EXERCISE}/CMD.sh
+if [ -e "exercises/${EXERCISE}/CMD_${LOCALE}.sh" ]; then source "exercises/${EXERCISE}/CMD_${LOCALE}.sh"; fi
 
 tLen=${#HELP[@]}
 

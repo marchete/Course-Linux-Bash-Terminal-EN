@@ -29,6 +29,6 @@ For accessing remote systems, SSH connections are used. You can connect to a Lin
 With the [Tech.io](https://tech.io/) virtualization technology all exercises will open a terminal for you. You don't need to install anything, it just works.
 
 So, let's use a Linux Terminal for the first time. Press **`Run`** to open a new Linux terminal.
-@[Print "Hello World!"]({"command":"/bin/bash /project/target/RUN.sh hello"})
+@[Print "Hello World!"]({"command":"/bin/bash /project/target/RUN.sh hello es"})
 
 >**Remember:** Bash terminal IS CASE SENSITIVE. 
