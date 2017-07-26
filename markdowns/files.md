@@ -3,7 +3,7 @@
 ## TODO
 Todo Todo
 ## Hands on
-@[TODO]({"command":"/bin/bash /project/target/navigate.sh"})
+@[TODO]({"command":"/bin/bash /project/target/RUN.sh files es"})
 
 ## Checklist - Things you have learned
 
