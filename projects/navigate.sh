@@ -7,7 +7,7 @@ touch /root/.bash_history
 
 #Open server. Magic 1-liner
 #ruby -run -ehttpd $WEBROOT/ -p8000 & &>/dev/nul
-ruby -rwebrick -e"WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => \"$WEBROOT\",  Logger: WEBrick::Log.new(\"/dev/null\"), AccessLog: [],).start"
+ruby -rwebrick -e"WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => \"$WEBROOT\",  Logger: WEBrick::Log.new(\"/dev/null\"), AccessLog: [],).start"&
 echo "TECHIO> open --port 8000 /viewer.html"
 
 
