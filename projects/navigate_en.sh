@@ -1,5 +1,5 @@
 #!/bin/bash
-source navigate.sh
+#source navigate.sh
 
 ##>>CHANGE TEXT AFTER THAT
 sendMessage "<h2>Write the command: <button class=\"btn\">pwd</button></h2></p>pwd will print the current directory where you are. It's not very useful in many Linux systems as you already have this info on the prompt line, but sometimes you have a long path and you can't see all the path"
