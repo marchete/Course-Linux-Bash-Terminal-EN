@@ -7,7 +7,7 @@ touch /root/.bash_history
 
 #Open server. Magic 1-liner
 #ruby -run -ehttpd $WEBROOT/ -p8000 & &>/dev/nul
-ruby -rwebrick -e"WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => \"$WEBROOT\",  Logger: WEBrick::Log.new(\"/dev/null\"), AccessLog: [],).start"&
+ruby -rwebrick -e"WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => \"$WEBROOT\", Logger: WEBrick::Log.new(\"/dev/null\"), AccessLog: [],).start"&
 echo "TECHIO> open --port 8000 /viewer.html"
 
 
@@ -60,4 +60,5 @@ sendMessage "<h3>Wonderful! It isn't that hard, right?. Now you can freely test 
 checkHistory "exit"
 sendMessage "<h2><span class=\"glyphicon glyphicon-ok-circle text-success\"></span> Well Done! Fill the checklist and continue to the next lesson.</h2>"
 echo "Well Done! Please fill the checklist with all you have learned."
+sleep 1s	
 echo "TECHIO> success true"
