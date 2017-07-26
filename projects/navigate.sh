@@ -37,6 +37,7 @@ function checkHistory {
   done 
 }
 
+echo "TECHIO> terminal"
 source navigate_${LOCALE}.sh
 source navigate_CMD.sh
 tLen=${#HELP[@]}
@@ -78,7 +79,6 @@ echo "$WELLDONE"
 #echo "Well Done! Please fill the checklist with all you have learned."
 
 
-echo "TECHIO> terminal"
 
 sleep 1s	
 echo "TECHIO> success true"
