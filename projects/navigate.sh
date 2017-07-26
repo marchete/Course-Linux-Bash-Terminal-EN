@@ -38,6 +38,6 @@ function checkHistory {
 
 
 echo "TECHIO> terminal"
-navigate_${LOCALE}.sh
+./navigate_${LOCALE}.sh
 sleep 1s	
 echo "TECHIO> success true"
