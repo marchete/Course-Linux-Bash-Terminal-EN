@@ -18,6 +18,25 @@ echo "TECHIO> open --port 8000 /viewer.html"
 
 source navigate_${LOCALE}.sh
 
+function sendMessage {
+echo "$1">$VIEWERFILE
+}
+
+function checkHistory {
+  FIND=$1
+  FINISHED=0
+  while [ $FINISHED -eq 0 ]; do
+    FILE=`cat /root/.bash_history | grep "$FIND" | grep -v /root/.bash_history |wc -l`
+    if [ $FILE -ge 1 ]
+    then
+      FINISHED=1
+	else 
+	  sleep 0.3	
+    fi
+    
+  done 
+}
+
 sendMessage "$HELP01"
 checkHistory "pwd"
 sendMessage "<h2>Good! Now move to the parent folder: <button class=\"btn\">cd ..</button></h2></p>cd is the command to Change Directory. It can be a relative or an absolute path. In this case is a relative path. Remember that you need an space between cd and the two dots."
